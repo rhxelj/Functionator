@@ -2,9 +2,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script type="text/javascript" src={script.js}></script> -->
+    <title>Functionator</title>
 </head>
 <body>
-    
+   
+    <script>
+        // let container=document.createElement("div")
+        // let title=document.createElement("h1")
+        let x=50
+        let myBlock
+        document.addEventListener("DOMContentLoaded",()=>{
+        //  title.innerText="Titulo....."
+            myBlock=document.createElement("div")
+            myBlock.textContent="Hello World!"
+            document.body.appendChild(myBlock)
+            
+            myBlock.style.backgroundColor="red"
+            myBlock.style.width="100px"
+            myBlock.style.height="100px"
+            myBlock.style.textAlign="center"
+            myBlock.style.position="absolute"
+            myBlock.style.left="100px"
+            myBlock.style.top="150px"
+
+            function left(){
+                x=x-1
+                myBlock.style.left= [x].toString() +'px'
+            }
+
+            function rigth(){
+                x=x+1
+                myBlock.style.left= [x].toString() +'px'
+            }
+            document.addEventListener("keyup",event=>{
+                if(event.keyCode==37){
+                    left()
+                }
+                if(event.keyCode==39){
+                    rigth()
+                }
+            })
+            // })
+        }
+        )
+    </script>
 </body>
 </html>
