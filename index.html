@@ -3,72 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <script type="text/javascript" src={script.js}></script> -->
+    <!-- <script src="script.js"></script> -->
     <title>Functionator</title>
 </head>
 <body>
-   
-    <script>
-        // let container=document.createElement("div")
-        // let title=document.createElement("h1")
-        let x=50
-        let myBlock
-            myBlock=document.createElement("div")
-            myBlock.textContent="Hello World!"
-            document.body.appendChild(myBlock)
-            
-            myBlock.style.backgroundColor="rgb(214, 50, 60)";
-
-            myBlock.style.width="100px"
-            myBlock.style.height="100px"
-            myBlock.style.textAlign="center"
-            myBlock.style.position="absolute"
-            myBlock.style.left="100px"
-            myBlock.style.top="150px"
-        document.addEventListener("DOMContentLoaded",()=>{
-        //  title.innerText="Titulo....."
-
-            function left(){
-                // x=x-50
-                x= myBlock.offsetLeft-50
-                myBlock.style.left= [x].toString() +'px'
-            }
-            
-            function up(){
-                // x=x-50
-                x = myBlock.offsetTop -50
-                myBlock.style.top= [x].toString() +'px'
-            }
-            function down(){
-                x=myBlock.offsetTop +50
-                myBlock.style.top= [x].toString() +'px'
-            }
-
-            function rigth(){
-                x=myBlock.offsetLeft+50
-                myBlock.style.left= [x].toString() +'px'
-            }
-            document.addEventListener("keyup",event=>{
-              event.preventDefault() //good practice to avoid any predifined effect for dis event
-                let r=Math.trunc(Math.random()*  Math.floor(255))
-                let g=Math.trunc(Math.random()*  Math.floor(255))
-                let b=Math.trunc(Math.random()*  Math.floor(255))
-                // console.log(color)
-                myBlock.style.backgroundColor=`rgb(${r},${g},${b})`;
-                
-                if(event.keyCode==37){
-                    left()
-                }else if(event.keyCode==39){
-                    rigth()
-                }else if(event.keyCode==38){
-                    up()
-                }else if(event.keyCode==40){
-                    down()
-                }
-            })
-            // })
-        }
-        )
-    </script>
+    
+    <script src="script.js"></script>
+       
 </body>
 </html>
